@@ -1,10 +1,10 @@
-Aave V2 Wallet Credit Scoring System
+##Aave V2 Wallet Credit Scoring System
 
 🧐 Overview
 
 This project creates a credit scoring system for wallets that interact with the Aave V2 protocol on the Polygon network. The scores range from 0 to 1000, indicating the financial reliability of DeFi users. We use a two-step approach:
 
-Rule-Based Model (baseline)
+#Rule-Based Model (baseline)
 
 Machine Learning Regression Model (Random Forest)
 
@@ -23,7 +23,7 @@ Train ML Model ⚖️ (Random Forest)
 Predict ML Scores (ml_wallet_scores.csv)
 
 
-⚖️ Features Used Per Wallet
+#⚖️ Features Used Per Wallet
 
 num_transactions
 
@@ -41,7 +41,7 @@ activity_days (last - first tx)
 
 action_diversity (number of unique actions)
 
-📊 Rule-Based Scoring Formula
+#📊 Rule-Based Scoring Formula
 
 score = 500
 score += min(deposit_usd, 50000) * 0.005        # Max +250
@@ -50,7 +50,7 @@ score += min(activity_days, 365) * 0.2          # Max +73
 score += action_diversity * 10                  # Max +50
 score -= num_liquidations * 50                  # Penalty
 
-🚀 ML Model Training
+#🚀 ML Model Training
 
 Model: RandomForestRegressor
 
@@ -60,7 +60,7 @@ Input: Engineered features
 
 Output: ml_wallet_scores.csv
 
-📄 Files in This Repo
+#📄 Files in This Repo
 aave-credit-scoring/
 ├── data/
 │   ├─ user-wallet-transactions.json
@@ -77,7 +77,7 @@ aave-credit-scoring/
 ├─ README.md
 └─ analysis.md
 
-📃 How to Run
+#📃 How to Run
 python scripts/feature_extraction.py
 python scripts/score_wallets.py
 python scripts/train_credit_model.py
