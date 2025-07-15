@@ -68,25 +68,41 @@ Output: ml_wallet_scores.csv
 # 📄 Files in This Repo 
 aave-credit-scoring/
 ├── data/
+
 │   ├─ user-wallet-transactions.json
+
 │   ├─ wallet_features.csv
+
 │   ├─ wallet_credit_scores.csv
+
 │   ├─ ml_wallet_scores.csv
+
 │   └─ score_distribution.png
 
 ├─ scripts/
+
 │   ├─ feature_extraction.py
+
 │   ├─ score_wallets.py
+
 │   ├─ train_credit_model.py
+
 │   └─ predict_with_model.py
+
 ├─ credit_model.pkl
+
 ├─ README.md
+
 └─ analysis.md
 
 # 📃 How to Run
+
 python scripts/feature_extraction.py
+
 python scripts/score_wallets.py
+
 python scripts/train_credit_model.py
+
 python scripts/predict_with_model.py
 
 
