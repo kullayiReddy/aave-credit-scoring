@@ -44,10 +44,15 @@ action_diversity (number of unique actions)
 # 📊 Rule-Based Scoring Formula 
 
 score = 500
+
 score += min(deposit_usd, 50000) * 0.005        # Max +250
+
 score += min(repay_ratio, 1.5) * 100            # Max +150
+
 score += min(activity_days, 365) * 0.2          # Max +73
+
 score += action_diversity * 10                  # Max +50
+
 score -= num_liquidations * 50                  # Penalty
 
 # 🚀 ML Model Training 
@@ -68,6 +73,7 @@ aave-credit-scoring/
 │   ├─ wallet_credit_scores.csv
 │   ├─ ml_wallet_scores.csv
 │   └─ score_distribution.png
+
 ├─ scripts/
 │   ├─ feature_extraction.py
 │   ├─ score_wallets.py
